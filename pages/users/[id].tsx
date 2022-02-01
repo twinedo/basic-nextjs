@@ -35,7 +35,7 @@ export async function getStaticPaths() {
   const paths = dataUsers.map((user: User) => ({
     params: { id: `${user.id}` },
   }));
-  return { paths, fallback: true };
+  return { paths, fallback: false };
 }
 
 interface GetStaticProps {
